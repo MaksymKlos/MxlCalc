@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Комбинаторные конфигурации";
+}
+<link href="@Url.Content("~/css/operations.min.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/css/comb.min.css")" rel="stylesheet" type="text/css" />
+<section class="main__calculator">
+    <h2 class="main__calculator-title">
+        Комбинаторные конфигурации
+    </h2>
+    <div class="main__calculator-body">
+        <partial name="~/Views/Combinations/@ViewBag.formType" />
+     </div>
+</section>

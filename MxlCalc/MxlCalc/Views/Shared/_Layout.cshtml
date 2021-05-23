@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MxlCalc</title>
+    <link rel="shortcut icon" href="@Url.Content("~/images/icon.ico")" type="image/x-icon">
+    <link href="@Url.Content("~/css/style.min.css")" rel="stylesheet" type="text/css" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="logo" href="@Url.Action("Index","Home")">
+                        <img src="@Url.Content("~/images/logo.png")" alt="logo">
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">О проекте</a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a class="menu__list-link" href="#">Обратная связь</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main role="main" class="main">
+            <div class="main__inner">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__copyright">
+                        <p>
+                            &copy MxlCalc
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

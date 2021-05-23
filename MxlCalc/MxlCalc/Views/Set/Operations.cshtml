@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Операции над множествами";
+    
+}
+
+<link href="@Url.Content("~/css/operations.min.css")" rel="stylesheet" type="text/css" />
+<section class="main__calculator">
+    <h2 class="main__calculator-title">
+        Операции над множествами
+    </h2>
+    <div class="main__calculator-body">
+        <form class="main__calculator-form" method="get">
+            <div class="form-top">
+                <h4 class="form-top__text">Выберите тип множества:</h4>
+                <label class="form-top__label" for="digital" title="Множество состоит из цифр">Цифровой</label>
+                <input class="form-top__radio" type="radio" id="digital" name="type" value="digital" required title="Множество состоит из цифр">
+                <label class="form-top__label" for="alphabetic" title="Множество состоит из латинских букв">Буквенный</label>
+                <input class="form-top__radio" type="radio" id="alphabetic" name="type" value="alphabetic" required title="Множество состоит из латинских букв">
+                <hr>
+                <p class="main__calculator-text">
+                    Введите множества через разделитель
+                </p>
+                <div class="form-top__body">
+                    <p class="body-input">
+                        A = {
+                        <input class="body-input-text" type="text" name="setA" required> }
+                    </p>
+                    <p class="body-select">
+                        <select class="form-top__options" name="operation" id="" required>
+                            <option value="intersect">&cap;</option>
+                            <option value="union">&cup;</option>
+                            <option value="setdiff">\</option>
+                            <option value="setxor">&#916;</option>
+                        </select><br />
+                    </p>
+                    <p class="body-input">
+                        B = {
+                        <input class="body-input-text" type="text" name="setB" required> }
+                    </p>
+                </div>
+            </div>
+            <div class="form-bottom">
+                <button class="form-bottom__button" type="submit">Решить</button>
+                <p class="form-bottom__answer">
+                    Ответ: C = { @ViewBag.Result }
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+</section>

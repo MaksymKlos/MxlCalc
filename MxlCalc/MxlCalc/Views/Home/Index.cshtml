@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Главная страница";
+}
+
+<section class="main__calculator">
+    <h2 class="main__calculator-title">
+        Калькуляторы
+    </h2>
+    <div class="main__calculator-body">
+        <form class="main__calculator-form" method="get">
+            <div class="form-top">
+                <label class="form-top__tile">Выберите тему:</label>
+                <select class="form-top__options" name="themes">
+                    <option value="sets">Множества</option>
+                    <option value="binary__relations" disabled alt="Пока недоступно">Бинарные отношения</option>
+                    <option value="combinations">Комбинаторика</option>
+                </select>
+            </div>
+            <div class="form-bottom">
+                <button class="form-bottom__button" type="submit">Выбрать</button>
+            </div>
+            <p class="main__calculator-text">
+                В меню выше можно выбрать раздел из дискретной математики, по которой вы хотите найти
+                калькулятор.
+            </p>
+        </form>
+    </div>
+
+</section>
+<hr>
+<section class="main__information">
+    <h2 class="main__information-title">
+        Вы можете выбрать одну из следующих тем
+    </h2>
+    <p class="main__information-text main__information-text--1">
+        <span class="bold">Множества</span> - есть 3 калькулятора:
+        <ul class="main__information-text-list">
+            <li class="main__information-text-item">Выполнить действие между двумя множествами</li>
+            <li class="main__information-text-item">Решить уравнение с 2 и более множеств</li>
+        </ul>
+    </p>
+    <p class="main__information-text main__information-text--2">
+        <span class="bold">Бинарные отношения</span> - один калькулятор:<br />
+        Проверить множество на различные свойства
+    </p>
+    <p class="main__information-text main__information-text--2">
+        <span class="bold">Комбинаторика</span> - один калькулятор:<br />
+        Выберите тип комбинаторной конфигурации для подсчёта.
+    </p>
+
+</section>

@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Бинарные отношения";
+}
+
+<section class="main__calculator">
+    <h2 class="main__calculator-title">
+        Калькуляторы
+    </h2>
+    <div class="main__calculator-body">
+        <form class="main__calculator-form" method="get">
+            <div class="form-top">
+                <p class="form-top__tile">
+                    <label>Выберите задачу для решения:</label>
+                </p>
+                <select class="form-top__options" name="calculators">
+                    <option value="operations">Операции над множествами</option>
+                    <option value="equation" disabled>Решить уравнение</option>
+                </select>
+            </div>
+            <div class="form-bottom">
+                <button class="form-bottom__button" type="submit">Выбрать</button>
+            </div>
+            <p class="main__calculator-text">
+                В меню выше можно выбрать раздел из дискретной математики, по которой вы хотите найти
+                калькулятор.
+            </p>
+        </form>
+    </div>
+
+</section>
+<hr>
+<section class="main__information">
+    <h2 class="main__information-title">
+        Вы можете выбрать один из следующих калькуляторов:
+    </h2>
+    <p class="main__information-text">
+        <span class="bold">Операции над множествами:</span><br />
+        Вы можете выбрать два множества и выполнить между ними следующие операции:
+
+        <ul class="main__information-text-list">
+            <li class="main__information-text-item">Пересечение</li>
+            <li class="main__information-text-item">Объединение</li>
+            <li class="main__information-text-item">Разница</li>
+            <li class="main__information-text-item">Симметричная разница</li>
+        </ul>
+    </p>
+    <p class="main__information-text">
+        <span class="bold">Решить уравнение:</span><br />
+        Вы можете ввести уравнение используя операции над множествами.
+    </p>
+    
+</section>
